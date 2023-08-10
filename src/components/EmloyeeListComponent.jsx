@@ -38,7 +38,7 @@ class EmloyeeListComponent extends Component {
 
                 <h2 className="text-center">Employees List</h2>
                 
-                    <button className="btn btn-primary" > Add Employee</button>
+                 
                 
                <br /> <br />  
                
@@ -51,6 +51,9 @@ class EmloyeeListComponent extends Component {
                                     <th>   Name</th>
                                     <th>   Age</th>
                                     <th>Gender</th>
+                                    <th>Position</th>
+                                    <th>Salary</th>
+                                  
                                     <th> Actions</th>
                                 </tr>
                             </thead>
@@ -63,6 +66,9 @@ class EmloyeeListComponent extends Component {
                                              <td> { employee.emp_name} </td>   
                                              <td> {employee.age}</td>
                                              <td> {employee.gender}</td>
+                                             <td>{employee.employeeDetails.position}</td>
+                                             <td>{employee.employeeDetails.salary}</td>
+                                             
                                              
                                               <td>
                                                  <button onClick={ () => this.editEmployee(employee.emp_id)} className="btn btn-info btn-sm">Update </button>
