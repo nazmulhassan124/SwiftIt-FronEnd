@@ -9,6 +9,7 @@ class AddEmployee extends Component {
   
 
     constructor(props) {
+      
         super(props)
         this.state = {
             emp_name: '',
