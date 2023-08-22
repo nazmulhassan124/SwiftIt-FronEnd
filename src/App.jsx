@@ -26,7 +26,7 @@ function App() {
        <Route exact path="/" element={<EmloyeeListComponent />}/>
        <Route exact path="/addemp" element={<AddEmployee />}/>
        {/* <Route exact path="/viewemp/:empid/view" element={<ViewSingleEmployee />}/> */}
-       <Route exact path="/viewemp" element={<ViewSingleEmployee />}/>
+       <Route exact path="/viewemp/:empId" element={<ViewSingleEmployee />}/>
        
        </Routes>
        </Router>

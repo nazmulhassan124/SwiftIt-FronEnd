@@ -24,6 +24,9 @@ class EmployeeService {
      updateEmployee(employee){
         return axios.put(URL + '/update' +  employee);
     }
+    getbyId(id){
+        return axios.get(URL+'/get/'+id)
+    }
 
 }
 

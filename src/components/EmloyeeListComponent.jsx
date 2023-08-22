@@ -31,13 +31,15 @@ class EmloyeeListComponent extends Component {
          });
     }
     viewEmployee(id){
+
+        
         // const match = useMatch(
         //     "/empview/:empid/view"
         //   );
         //   match.params.empid; 
          
         
-        // this.props.history.push(`/view-employee/${id}`);
+     //    this.props.history.push(`/viewemp/${id}`);
         console.log("Id :"+ id)
     }
     editEmployee(id){
@@ -87,7 +89,7 @@ class EmloyeeListComponent extends Component {
                                               <td>
                                                  <button onClick={ () => this.editEmployee(employee.emp_id)} className="btn btn-info btn-sm">Update </button>
                                                  
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.emp_id)} className="btn btn-info btn-sm"  href="/viewemp">  <Link to="viewemp">View</Link></button>
+                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.emp_id)} className="btn btn-info btn-sm" > <Link to={`/viewemp/${employee.emp_id}`} reloadDocument={true}>View </Link> </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.emp_id)} className="btn btn-danger btn-sm">Delete </button>
                                              </td> 
                                         </tr>
