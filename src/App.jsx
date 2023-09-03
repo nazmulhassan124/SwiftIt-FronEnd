@@ -6,6 +6,7 @@ import Header from './components/Header'
 import AddEmployee from './components/AddEmployee'
 import {BrowserRouter as Router,  Routes, Route } from 'react-router-dom';
 import ViewSingleEmployee from './components/ViewSingleEmployee'
+import List2 from './components/List2'
 
 
 function App() {
@@ -27,13 +28,11 @@ function App() {
        <Route exact path="/addemp" element={<AddEmployee />}/>
        {/* <Route exact path="/viewemp/:empid/view" element={<ViewSingleEmployee />}/> */}
        <Route exact path="/viewemp/:empId" element={<ViewSingleEmployee />}/>
+       <Route exact path="/list2" element={<List2 />}/>
        
        </Routes>
        </Router>
-    {/* <AddProduct></AddProduct>
     
-      <EmloyeeListComponent></EmloyeeListComponent>   
-      */}
     
 
     </div>

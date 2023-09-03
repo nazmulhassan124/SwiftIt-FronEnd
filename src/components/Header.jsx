@@ -24,12 +24,18 @@ class Header extends Component {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+
+        <li className="nav-item">
+          <a className="nav-link" href="/addemp">Add  Employee</a>
+        </li>
         <li className="nav-item">
           <a className="nav-link" href="/">Employee List</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/addemp">Add  Employee</a>
+          <a className="nav-link" href="/list2">Employee List</a>
         </li>
+
+      
        
        
       </ul>

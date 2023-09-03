@@ -13,15 +13,26 @@ class EmloyeeListComponent extends Component {
     constructor( props){
         super(props)
         this.state= {
-            employees:[]
+            employees:[],
+            date: new Date(),
         }
     }
+
+  
 
 
     componentDidMount(){
         EmployeeService.getEmployees().then((res) => {
             this.setState({ employees: res.data});
         });
+         setInterval(this.tick, 1000);
+    }
+    tick=()=>{
+        this.setState({
+            date:new Date(),
+            
+        })
+       
     }
 
 
@@ -48,12 +59,13 @@ class EmloyeeListComponent extends Component {
 
 
     render() {
+        
         return (
             <div>
                 
 
                 <h2 className="text-center">Employees List</h2>
-                
+                <h4 className="text-end me-5" >Time:{this.state.date.toLocaleTimeString()} </h4>
                  
                 
                <br /> <br />  
@@ -87,7 +99,7 @@ class EmloyeeListComponent extends Component {
                                              
                                              
                                               <td>
-                                                 <button onClick={ () => this.editEmployee(employee.emp_id)} className="btn btn-info btn-sm">Update </button>
+                                                 <button onClick={ () => this.editEmployee(employee.emp_id)} className="btn btn-info btn-sm">Edit </button>
                                                  
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.emp_id)} className="btn btn-info btn-sm" > <Link to={`/viewemp/${employee.emp_id}`} reloadDocument={true}>View </Link> </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.emp_id)} className="btn btn-danger btn-sm">Delete </button>
