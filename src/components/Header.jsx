@@ -28,11 +28,19 @@ class Header extends Component {
         <li className="nav-item">
           <a className="nav-link" href="/addemp">Add  Employee</a>
         </li>
+
+        <li className="nav-item">
+          <a className="nav-link" href="/addemp2">Add  Employee 2</a>
+        </li>
+
         <li className="nav-item">
           <a className="nav-link" href="/">Employee List</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/list2">Employee List</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/temparature">Temparature</a>
         </li>
 
       
